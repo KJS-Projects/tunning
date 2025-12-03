@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import logo from "@/public/logo.png";
 import Link from "next/link";
 
 export default function Navigation() {
@@ -38,8 +40,8 @@ export default function Navigation() {
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">T</span>
+                className="w-10 h-10 rounded-full bg-linear-to-br flex items-center justify-center">
+                <Image src={logo} alt="Tunning Logo" width={400} height={400} className="object-cover" />
               </motion.div>
               <div>
                 <h1 className="text-2xl font-bold gradient-text">Tunning</h1>
